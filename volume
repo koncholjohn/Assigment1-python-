@@ -1,0 +1,9 @@
+import scipy.integrate as integrate
+
+# Define the function
+def surface_function(x, y):
+    return x**2 + y**2
+
+# Define integration limits
+volume, error = integrate.dblquad(surface_function, 0, 1, lambda x: 0, lambda x: 1)
+print(f"Volume under the surface: {volume}")
